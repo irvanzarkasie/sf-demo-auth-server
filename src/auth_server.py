@@ -38,7 +38,7 @@ def get_auth_certs():
 @app.route('/auth/exchange_token', methods=['GET'])
 def do_auth_exchange():
   TTL = 600
-  EXCHANGETS = 1716099507
+  EXCHANGETS = int(datetime.now().timestamp())
   EXCHANGEEXP = EXCHANGETS + TTL
   EXCHANGECERT_KEY = CERTKEY_2
   
